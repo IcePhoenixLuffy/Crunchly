@@ -1,0 +1,8 @@
+{
+  "name": "CampusBite — Smart College Canteen Platform",
+  "description": "Skip campus queues with digital canteen ordering, live queue tracking, contactless pickup tokens, and kitchen management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

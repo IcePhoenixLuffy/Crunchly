@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom Cursor Rules: Hide native cursor only on desktop when custom cursor is active */
+@media (pointer: fine) {
+  body.custom-cursor-enabled,
+  body.custom-cursor-enabled a,
+  body.custom-cursor-enabled button,
+  body.custom-cursor-enabled [role="button"],
+  body.custom-cursor-enabled select,
+  body.custom-cursor-enabled .cursor-pointer {
+    cursor: none !important;
+  }
+
+  /* Maintain intuitive text cursor for inputs and textareas */
+  body.custom-cursor-enabled input,
+  body.custom-cursor-enabled textarea {
+    cursor: text !important;
+  }
+}
+
+/* Custom smooth transitions and utility animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
